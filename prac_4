@@ -1,0 +1,185 @@
+flutter application to display “Hello World” at the centre of the Screen
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        useMaterial3: true,
+      ),
+      home: const Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget
+{
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      body:Center(
+        child:Text('Hello World'),
+        
+     ),
+    );
+  }
+}
+
+
+flutter application to display “Hello World” with padding.
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const Home(),
+    );
+  }
+}
+class Home extends StatelessWidget
+{
+  const Home({super.key});
+
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+       appBar: AppBar(
+        title: const Text('Padding Example')
+    ),
+        body: const Card(
+         child:Padding(
+             padding: EdgeInsets.all(16.0),
+             child:Text('Hello World')
+         )
+        )
+    );
+  }
+} 
+
+
+to display “Hello World” at the top right alignment
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor:Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const Home(),
+    );
+  }
+}
+class Home extends StatelessWidget
+{
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+        appBar: AppBar(
+            title: const Text('AlignmentExample')
+        ),
+        body: Center(
+          child: Container(
+              height: 120.0,
+              width: 120.0,
+              color: Colors.blue[50],
+              child: const Align(
+                alignment: Alignment.topRight,
+                child:Text('Hello world'),
+              )
+          ),
+        )
+    );
+  }
+}
+
+
+flutter application to display text row wise
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const Home(),
+    );
+  }
+}
+class Home extends StatelessWidget {
+  const Home({super.key});
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Alignment Example'),
+        ),
+        body:const Row(
+          children: <Widget>[
+            Expanded(
+              child: Text('hello',textAlign: TextAlign.center,),
+            ),
+            Expanded(
+              child: Text('world',textAlign: TextAlign.center,),
+            ),
+            Expanded(child: FittedBox(
+              child: FlutterLogo(),
+            ))
+          ],
+        )
+    );
+  }
+}
+
+
+
+
+
