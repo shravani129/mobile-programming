@@ -1,0 +1,79 @@
+palindrome::
+n=int(input("enter a number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev+dig
+    n=n/10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number is not a palindrome!")
+
+
+
+
+armstrong::
+num=128
+order=3
+sum=0
+order+3
+temp=num
+while temp>0:
+    digit=temp % 10
+    sum+= digit**order
+    temp//=10
+if num==sum:
+    print(num,"is a armstrong number")
+else:
+    print(num,"is not an armstrong number")
+
+
+
+factorial:
+a=int(input("Enter num:"))
+fact=1
+for x in range(1,a+1):
+    fact=fact*x
+    print(fact)
+
+
+
+sum of list:
+def sum_of_list(lst):
+    return sum(lst)
+numbers = [1, 2, 3, 4, 5]
+result = sum_of_list(numbers)
+print(f"The sum of the list is: {result}")
+
+user define
+def sum_of_list(user_list):
+    return sum(user_list)
+user_input = input("Enter numbers separated by spaces: ")
+user_list = list(map(int, user_input.split()))
+result = sum_of_list(user_list)
+print("The sum of the list is:", result)
+
+
+inheritance:
+class Animal:
+    def speak(self):
+        return "Animal makes a sound"
+class Dog(Animal):
+    def speak(self):
+        return "Dog barks"
+dog = Dog()
+print(dog.speak())
+
+
+three dict in one dict::
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+dict3 = {'e': 5, 'f': 6}
+combined_dict = {}
+combined_dict.update(dict1)
+combined_dict.update(dict2)
+combined_dict.update(dict3)
+print(combined_dict)
+
