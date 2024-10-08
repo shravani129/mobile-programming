@@ -1,0 +1,112 @@
+Gui label widget::
+import tkinter as tk
+from tkinter import*
+W1=tk.Tk()
+W1.title('My App')
+L1=tk.Label(W1,text='enter no',bg='red', height=5,width=10,fg='white')
+L1.pack()
+W1.mainloop()
+
+
+GUI using pack, grid,label::
+import tkinter as tk
+from tkinter import *
+w1 = tk.Tk()
+w1.title('My App')
+label1 = tk.Label(w1, text="Enter Number", bg='red', height=5, width=10, fg='white')
+label1.grid(row=2, column=6)
+w1.mainloop()
+
+
+
+username and pass::
+from tkinter import *
+def put():
+    point = E1.get()
+    print(point)
+root = Tk()
+root.title("User Input App")
+L1 = Label(root, text="Username")
+L1.grid(row=1, column=1)
+E1 = Entry(root, bd=5)
+E1.grid(row=1, column=2)
+B1 = Button(root, text="Submit", command=put)
+B1.grid(row=3, column=2)
+root.mainloop()
+
+
+
+checkbox::
+import tkinter as tk
+from tkinter import *
+w = tk.Tk()
+w.title("Checkbox Example")
+check_var1 = IntVar()
+check_var2 = IntVar()
+C1 = Checkbutton(w, text="Music", variable=check_var1, onvalue=1, offvalue=0, height=5, width=20)
+C2 = Checkbutton(w, text="Video", variable=check_var2, onvalue=1, offvalue=0, height=5, width=20)
+C1.pack()
+C2.pack()
+w.mainloop()
+
+
+
+
+listbox:
+import tkinter as tk
+from tkinter import *
+w = tk.Tk()
+w.title("Programming Languages Listbox")
+listbox = Listbox(w)
+listbox.insert(1, "Python")
+listbox.insert(2, "Perl")
+listbox.insert(3, "C")
+listbox.insert(4, "PHP")
+listbox.insert(5, "JSP")
+listbox.insert(6, "Ruby")
+listbox.pack()
+w.mainloop()
+
+
+
+
+messagebox::
+from tkinter import *
+import tkinter as tk
+from tkinter import messagebox
+def hello1():
+    messagebox.showinfo("Info", "Hello World")
+def hello2():
+    messagebox.showinfo("Warning", "Wrong Input")
+def hello3():
+    messagebox.showerror("Show Error", "An error occurred")
+def ask_yes_no():
+    response = messagebox.askyesno("Ask Yes No", "Do you want to continue?")
+    print(response)
+w = tk.Tk()
+btn1 = Button(w, text="Say Hello", command=hello1)
+btn1.pack()
+btn2 = Button(w, text="Show Warning", command=hello2)
+btn2.pack()
+btn3 = Button(w, text="Show Error", command=hello3)
+btn3.pack()
+btn4 = Button(w, text="Ask Yes/No", command=ask_yes_no)
+btn4.pack()
+w.mainloop()
+
+
+canvas::
+import tkinter as tk
+w = tk.Tk()
+c = tk.Canvas(w, bg="pink", height=350, width=400)
+coords = 50, 90, 240, 210
+c.create_rectangle(coords, fill="blue")
+line_coords = (30, 160, 110, 200)
+c.create_line(line_coords)
+oval_coords = (10, 60, 60, 200)
+c.create_oval(oval_coords, fill="red")
+polygon_coords = (10, 30, 40, 30, 110, 50)
+c.create_polygon(polygon_coords, fill="green")
+c.pack()
+w.mainloop()
+
